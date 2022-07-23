@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marlen y Carlos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tarjeta.css" />
+  </head>
+  <body>
+    <audio class="aparienciaAudio" controls autoplay loop preload="auto">
+      <source src="music/lava.mp3" type="audio/mpeg" />
+    </audio>
+
+    <section class="flex">
+      <div class="contenedor-tarjeta">
+        <div class="tarjeta">
+          <img src="imagenes/Tarjeta.jpg " alt="tarjeta" />
+        </div>
+      </div>
+
+      <div class="information">
+        <h1>INFORMACIÓN</h1>
+        <div class="items">
+          <div class="item">
+            <a class="botones" onclick="ceremoniaAnimacion()">CEREMONIA</a>
+            <div class="desplegar">
+              <p class="info desaparece">Iglesia Nuestra Señora del Rosario</p>
+              <p class="info desaparece">Cra 9 N 12-68</p>
+              <p class="info desaparece">Villa de Leyva - Boyacá</p>
+              <p class="info desaparece">H: 14:00</p>
+              <a
+              class="info info-mapa desaparece"
+              href="https://goo.gl/maps/47nbgZyazQvRo14A6"
+              >Ver Mapa</a
+              >
+            </div>
+          </div>
+
+          <div class="item">
+            <a class="botones" onclick="celebracionAnimacion()">CELEBRACIÓN</a>
+            <div class="desplegar">
+              <p class="info2 desaparece2">Restaurante el Solar de La Guaca</p>
+              <p class="info2 desaparece2">Cra 9 N 13-57</p>
+              <p class="info2 desaparece2">H: 20:00</p>
+              <a
+              class="info2 info-mapa desaparece2"
+              href="https://g.page/elsolardelaguaca?share"
+              >Ver Mapa</a
+              >
+            </div>
+          </div>
+
+          <div class="item">
+            <a class="botones" href="#">REGALOS</a>
+          </div>
+
+          <div class="item">
+            <a class="botones" onclick="asistenciaAnimacion()"
+              >CONFIRMAR ASISTENCIA</a
+            >
+            <div class="desplegar">
+              <p class="info3 desaparece3">
+                Para nosotros es muy significativo el hecho de que estes
+                presente en nuestro maravilloso día, por favor confírmanos tu
+                asistencia.
+              </p>
+              <a
+              class="info3 info-mapa desaparece3"
+              href="https://wa.me/573126730874?text=Gracias%20por%20la%20invitación,%20asistiré."
+              >Mensaje</a
+              >
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- script de javascript -->
+    <script>
+     
+     
+     //funcion para la animacion del boton de ceremonia
+      function ceremoniaAnimacion() {
+        console.log("Esta funcionando mi boton");
+        var ancla = document.getElementsByClassName("info");
+        for (var i = 0; i < ancla.length; i++) {
+          ancla[i].classList.toggle("desaparece");
+        }
+      }
+
+      // funcion para la animacion del boton celebracion
+      function celebracionAnimacion() {
+        console.log("Esta funcionando mi boton");
+        var ancla2 = document.getElementsByClassName("info2");
+        for (var i = 0; i < ancla2.length; i++) {
+          ancla2[i].classList.toggle("desaparece2");
+        }
+      }
+
+      // funcion para la animacion del boton de asistencia
+      function asistenciaAnimacion() {
+        console.log("Esta funcionando mi boton");
+        var ancla3 = document.getElementsByClassName("info3");
+        for (var i = 0; i < ancla3.length; i++) {
+          ancla3[i].classList.toggle("desaparece3");
+        }
+      }
+    </script>
+  </body>
+</html>
