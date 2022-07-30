@@ -43,7 +43,7 @@ hr{
 .tarjeta {
   /* max-width: 500px; */
   /* max-height: 100%; */
-  width: 45%;
+  width: 50%;
   border-radius: 5px;
 
 }
@@ -156,6 +156,20 @@ hr{
   .information {
     flex: 2;
   }
+  .tarjeta{
+    width: 70%;
+  }
+}
+@media (max-width: 1000px) {
+  .contenedor-tarjeta {
+    flex: 5;
+  }
+  .information {
+    flex: 2;
+  }
+  .tarjeta{
+    width:85% ;
+  }
 }
 
 @media (max-width: 768px) {
@@ -169,6 +183,28 @@ hr{
   }
   .tarjeta{
     width: 95%;
+  }
+
+  .information {
+    flex: 1;
+    align-items: center;
+  }
+  .items {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .contenedor-tarjeta {
+    flex: 1;
+    min-height: 100vh;
+  }
+  .tarjeta{
+    width: 50%%;
   }
 
   .information {
