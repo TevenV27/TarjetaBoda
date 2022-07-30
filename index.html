@@ -16,6 +16,7 @@
   <body>
     <audio class="aparienciaAudio" controls autoplay loop preload="auto">
       <source src="music/lava.mp3" type="audio/mpeg" />
+      <source src="music/lava.mp3" type="audio/mpeg" />
     </audio>
 
     <section class="flex">
@@ -40,7 +41,7 @@
                 href="https://goo.gl/maps/47nbgZyazQvRo14A6"
                 >Ver Mapa</a
               >
-            <hr>
+              <hr />
             </div>
           </div>
 
@@ -57,20 +58,25 @@
                 >Ver Mapa</a
               >
             </div>
-            <hr>
+            <hr />
           </div>
 
           <div class="item">
-            <a class="botones" href="https://www.noviosfalabella.com.co/novios-co/public/resultadoBusquedaNovios.do?categoria=
-               todas&idsJerarquias=&nombreCategoria=&nivelCategoria=&codigoEvento=&dvEvento=&radTipoBusqueda=1&txtBusqueda=299860-02">REGALOS</a>
+            <a class="botones" onclick="regalosAnimacion()">REGALOS</a>
             <div>
-
-              <p>
-                
+              <p class="info4 desaparece4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officia, porro dignissimos, voluptate voluptates, architecto
+                dolores corporis quidem rerum perferendis magnam aliquid
+                distinctio ducimus vitae facilis ipsam tempora dolor esse magni!
               </p>
-
+              <a
+                class="info4 info-mapa desaparece4"
+                href="https://www.noviosfalabella.com.co/novios-co/public/resultadoBusquedaNovios.do?categoria=todas&idsJerarquias=&nombreCategoria=&nivelCategoria=&codigoEvento=&dvEvento=&radTipoBusqueda=1&txtBusqueda=299860-02"
+                >Pagina Regalos</a
+              >
             </div>
-            <hr>
+            <hr />
           </div>
 
           <div class="item">
@@ -89,7 +95,7 @@
                 >Mensaje</a
               >
             </div>
-            <hr>
+            <hr />
           </div>
         </div>
       </div>
@@ -99,7 +105,6 @@
     <script>
       //funcion para la animacion del boton de ceremonia
       function ceremoniaAnimacion() {
-        console.log("Esta funcionando mi boton");
         var ancla = document.getElementsByClassName("info");
         for (var i = 0; i < ancla.length; i++) {
           ancla[i].classList.toggle("desaparece");
@@ -108,7 +113,6 @@
 
       // funcion para la animacion del boton celebracion
       function celebracionAnimacion() {
-        console.log("Esta funcionando mi boton");
         var ancla2 = document.getElementsByClassName("info2");
         for (var i = 0; i < ancla2.length; i++) {
           ancla2[i].classList.toggle("desaparece2");
@@ -117,10 +121,16 @@
 
       // funcion para la animacion del boton de asistencia
       function asistenciaAnimacion() {
-        console.log("Esta funcionando mi boton");
         var ancla3 = document.getElementsByClassName("info3");
         for (var i = 0; i < ancla3.length; i++) {
           ancla3[i].classList.toggle("desaparece3");
+        }
+      }
+      // funcion para la animacion del boton de regalos
+      function regalosAnimacion() {
+        var ancla4 = document.getElementsByClassName("info4");
+        for (var i = 0; i < ancla4.length; i++) {
+          ancla4[i].classList.toggle("desaparece4");
         }
       }
     </script>
