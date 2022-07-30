@@ -13,8 +13,9 @@
     />
     <link rel="stylesheet" href="tarjeta.css" />
   </head>
-  <body preload="auto">
+  <body>
     <audio class="aparienciaAudio" controls autoplay loop preload="auto">
+      <source src="music/lava.mp3" type="audio/mpeg" />
       <source src="music/lava.mp3" type="audio/mpeg" />
     </audio>
 
@@ -36,29 +37,59 @@
               <p class="info desaparece">Villa de Leyva - Boyacá</p>
               <p class="info desaparece">H: 14:00</p>
               <a
-              class="info info-mapa desaparece"
-              href="https://goo.gl/maps/47nbgZyazQvRo14A6"
-              >Ver Mapa</a
+                class="info info-mapa desaparece"
+                href="https://goo.gl/maps/47nbgZyazQvRo14A6"
+                >Ver Mapa</a
               >
+              <hr />
             </div>
           </div>
 
           <div class="item">
             <a class="botones" onclick="celebracionAnimacion()">CELEBRACIÓN</a>
+
             <div class="desplegar">
               <p class="info2 desaparece2">Restaurante el Solar de La Guaca</p>
               <p class="info2 desaparece2">Cra 9 N 13-57</p>
               <p class="info2 desaparece2">H: 20:00</p>
               <a
-              class="info2 info-mapa desaparece2"
-              href="https://g.page/elsolardelaguaca?share"
-              >Ver Mapa</a
+                class="info2 info-mapa desaparece2"
+                href="https://g.page/elsolardelaguaca?share"
+                >Ver Mapa</a
               >
             </div>
+            <hr />
           </div>
 
           <div class="item">
-            <a class="botones" href="#">REGALOS</a>
+            <a class="botones" onclick="regalosAnimacion()">REGALOS</a>
+            <div class="desplegar">
+              <p class="info4 desaparece4">
+                El regalo lo dejamos a la comodidad de tu preferencia.
+              </p>
+
+              <div class="info4 desaparece4 descrip">
+
+                <ul class="info4 desaparece4">
+                  <li class="alineamiento">Lluvia de Sobres.</li>
+                  <li class="alineamiento">Transferencia cuenta de ahorros Bancolombia:</li>
+                  <p class="alineamiento">N° 675 310840 10</p>
+                  <li class="alineamiento">Lista de Regalos:</li>
+
+                </ul>
+                <!-- <p class="info4 alineamiento desaparece4">Lluvia de Sobres</p>
+                <p class="info4 alineamiento desaparece4">Transferencia cuenta de ahorros Bancolombia</p>
+                <p class="info4 alineamiento desaparece4">N° 675 310840 10</p>
+                <p class="info4 alineamiento desaparece4">Lista de Regalos</p> -->
+              </div>
+
+              <a
+                class="info4 info-mapa desaparece4"
+                href="https://www.noviosfalabella.com.co/novios-co/public/resultadoBusquedaNovios.do?categoria=todas&idsJerarquias=&nombreCategoria=&nivelCategoria=&codigoEvento=&dvEvento=&radTipoBusqueda=1&txtBusqueda=299860-02"
+                >Pagina de Regalos</a
+              >
+            </div>
+            <hr />
           </div>
 
           <div class="item">
@@ -72,24 +103,21 @@
                 asistencia.
               </p>
               <a
-              class="info3 info-mapa desaparece3"
-              href="https://wa.me/573126730874?text=Gracias%20por%20la%20invitación,%20asistiré."
-              >Mensaje</a
+                class="info3 info-mapa desaparece3"
+                href="https://wa.me/573126730874?text=Gracias%20por%20la%20invitación,%20asistiré."
+                >Mensaje</a
               >
             </div>
+            <hr />
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- script de javascript -->
     <script>
-     
-     
-     //funcion para la animacion del boton de ceremonia
+      //funcion para la animacion del boton de ceremonia
       function ceremoniaAnimacion() {
-        console.log("Esta funcionando mi boton");
         var ancla = document.getElementsByClassName("info");
         for (var i = 0; i < ancla.length; i++) {
           ancla[i].classList.toggle("desaparece");
@@ -98,7 +126,6 @@
 
       // funcion para la animacion del boton celebracion
       function celebracionAnimacion() {
-        console.log("Esta funcionando mi boton");
         var ancla2 = document.getElementsByClassName("info2");
         for (var i = 0; i < ancla2.length; i++) {
           ancla2[i].classList.toggle("desaparece2");
@@ -107,10 +134,16 @@
 
       // funcion para la animacion del boton de asistencia
       function asistenciaAnimacion() {
-        console.log("Esta funcionando mi boton");
         var ancla3 = document.getElementsByClassName("info3");
         for (var i = 0; i < ancla3.length; i++) {
           ancla3[i].classList.toggle("desaparece3");
+        }
+      }
+      // funcion para la animacion del boton de regalos
+      function regalosAnimacion() {
+        var ancla4 = document.getElementsByClassName("info4");
+        for (var i = 0; i < ancla4.length; i++) {
+          ancla4[i].classList.toggle("desaparece4");
         }
       }
     </script>
