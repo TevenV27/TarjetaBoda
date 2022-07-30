@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="tarjeta.css" />
   </head>
-  <body preload="auto">
+  <body>
     <audio class="aparienciaAudio" controls autoplay loop preload="auto">
       <source src="music/lava.mp3" type="audio/mpeg" />
     </audio>
@@ -36,29 +36,40 @@
               <p class="info desaparece">Villa de Leyva - Boyacá</p>
               <p class="info desaparece">H: 14:00</p>
               <a
-              class="info info-mapa desaparece"
-              href="https://goo.gl/maps/47nbgZyazQvRo14A6"
-              >Ver Mapa</a
+                class="info info-mapa desaparece"
+                href="https://goo.gl/maps/47nbgZyazQvRo14A6"
+                >Ver Mapa</a
               >
+            <hr>
             </div>
           </div>
 
           <div class="item">
             <a class="botones" onclick="celebracionAnimacion()">CELEBRACIÓN</a>
+
             <div class="desplegar">
               <p class="info2 desaparece2">Restaurante el Solar de La Guaca</p>
               <p class="info2 desaparece2">Cra 9 N 13-57</p>
               <p class="info2 desaparece2">H: 20:00</p>
               <a
-              class="info2 info-mapa desaparece2"
-              href="https://g.page/elsolardelaguaca?share"
-              >Ver Mapa</a
+                class="info2 info-mapa desaparece2"
+                href="https://g.page/elsolardelaguaca?share"
+                >Ver Mapa</a
               >
             </div>
+            <hr>
           </div>
 
           <div class="item">
-            <a class="botones" href="#">REGALOS</a>
+            <a class="botones" href="https://www.noviosfalabella.com.co/novios-co/public/inicio.do">REGALOS</a>
+            <div>
+
+              <p>
+                
+              </p>
+
+            </div>
+            <hr>
           </div>
 
           <div class="item">
@@ -72,22 +83,20 @@
                 asistencia.
               </p>
               <a
-              class="info3 info-mapa desaparece3"
-              href="https://wa.me/573126730874?text=Gracias%20por%20la%20invitación,%20asistiré."
-              >Mensaje</a
+                class="info3 info-mapa desaparece3"
+                href="https://wa.me/573126730874?text=Gracias%20por%20la%20invitación,%20asistiré."
+                >Mensaje</a
               >
             </div>
+            <hr>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- script de javascript -->
     <script>
-     
-     
-     //funcion para la animacion del boton de ceremonia
+      //funcion para la animacion del boton de ceremonia
       function ceremoniaAnimacion() {
         console.log("Esta funcionando mi boton");
         var ancla = document.getElementsByClassName("info");
