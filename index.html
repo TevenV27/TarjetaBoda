@@ -29,7 +29,7 @@
       <div class="information">
         <h1 class="titulo">INFORMACIÓN</h1>
         <div class="items">
-          <hr>
+          <hr />
           <div class="item">
             <a class="botones" onclick="ceremoniaAnimacion()">CEREMONIA</a>
             <div class="desplegar">
@@ -42,7 +42,6 @@
                 href="https://goo.gl/maps/47nbgZyazQvRo14A6"
                 >Ver Mapa</a
               >
-              
             </div>
             <hr />
           </div>
@@ -71,13 +70,13 @@
               </p>
 
               <div class="info4 desaparece4 descrip">
-
                 <ul class="info4 desaparece4">
                   <li class="alineamiento">Lluvia de Sobres.</li>
-                  <li class="alineamiento">Transferencia cuenta de ahorros Bancolombia:</li>
+                  <li class="alineamiento">
+                    Transferencia cuenta de ahorros Bancolombia:
+                  </li>
                   <p class="alineamiento">N° 675 310840 10</p>
                   <li class="alineamiento">Lista de Regalos:</li>
-
                 </ul>
               </div>
 
@@ -89,7 +88,19 @@
             </div>
             <hr />
           </div>
+          <div class="item">
+            <a class="botones" onclick="vestimentaAnimacion()">
+              CODIGO DE VESTIMENTA</a
+            >
+            <div class="desplegar">
+              <p class="info5 desaparece5 alineamiento">
+                Mujeres: Vestido largo, hermosas como siempre.
+              </p>
+              <p class="info5 desaparece5 alineamiento">Hombres: Traje, lindos todos.</p>
+            </div>
 
+            <hr />
+          </div>
           <div class="item">
             <a class="botones" onclick="asistenciaAnimacion()"
               >CONFIRMAR ASISTENCIA</a
@@ -142,6 +153,14 @@
         var ancla4 = document.getElementsByClassName("info4");
         for (var i = 0; i < ancla4.length; i++) {
           ancla4[i].classList.toggle("desaparece4");
+        }
+      }
+
+      // funcion para la animacion del boton de regalos
+      function vestimentaAnimacion() {
+        var ancla5 = document.getElementsByClassName("info5");
+        for (var i = 0; i < ancla5.length; i++) {
+          ancla5[i].classList.toggle("desaparece5");
         }
       }
     </script>
