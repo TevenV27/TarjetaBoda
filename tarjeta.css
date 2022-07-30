@@ -11,6 +11,9 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
 }
+hr{
+  margin-top: 5px;
+}
 
 .flex {
   display: flex;
@@ -34,15 +37,17 @@ body {
   border-radius: 10px;
 }
 .tarjeta {
-  max-width: 500px;
-  max-height: 100%;
+  /* max-width: 500px; */
+  /* max-height: 100%; */
+  width: 45%;
   border-radius: 5px;
-  box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749);
+
 }
 .tarjeta > img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
+  box-shadow:  5px 5px 25px rgba(27, 27, 27, 0.749);
 }
 
 .information {
@@ -65,8 +70,12 @@ body {
 
 .item {
   border-radius: 5px;
-  border-bottom: 1px solid rgb(98, 98, 98);
-  padding-top: 6px;
+  padding-top: 2px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.items{
+  margin-top: 10px;
 }
 
 .botones {
@@ -82,7 +91,7 @@ body {
 }
 
 .desplegar {
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .info {
@@ -133,6 +142,9 @@ body {
   .contenedor-tarjeta {
     flex: 1;
     min-height: 100vh;
+  }
+  .tarjeta{
+    width: 95%;
   }
 
   .information {
