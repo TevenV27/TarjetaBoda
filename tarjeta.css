@@ -11,12 +11,11 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
 }
-hr{
+hr {
   margin-top: 5px;
   background-color: rgb(0, 132, 51);
   background: rgb(0, 132, 51);
   color: rgb(0, 132, 51);
-
 }
 
 .flex {
@@ -24,7 +23,7 @@ hr{
 }
 
 .contenedor-tarjeta {
-  flex: 4;
+  flex: 3.5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,18 +44,18 @@ hr{
   /* max-height: 100%; */
   width: 50%;
   border-radius: 5px;
-
 }
 .tarjeta > img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
-  box-shadow:  5px 5px 25px rgba(27, 27, 27, 0.749);
+  box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749);
 }
 
 .information {
   flex: 1;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   gap: 6px;
   height: 100vh;
@@ -71,7 +70,7 @@ hr{
 .information > h1 {
   margin-bottom: 10px;
 }
-.titulo{
+.titulo {
   margin-top: 15px;
   margin-bottom: 0px;
 }
@@ -82,7 +81,7 @@ hr{
   margin-top: 5px;
   margin-bottom: 2px;
 }
-.items{
+.items {
   margin-top: 0px;
 }
 
@@ -141,22 +140,22 @@ hr{
 .desaparece3 {
   display: none;
 }
-.desaparece4{
+.desaparece4 {
   display: none;
 }
-.desaparece5{
+.desaparece5 {
   display: none;
 }
-.alineamiento{
+.alineamiento {
   text-align: left;
   margin-left: 5px;
   margin-top: 2px;
 }
-.alineamiento2{
+.alineamiento2 {
   text-align: center;
   color: rgb(0, 132, 51);
 }
-.descrip{
+.descrip {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 10px;
@@ -170,7 +169,7 @@ hr{
   .information {
     flex: 2;
   }
-  .tarjeta{
+  .tarjeta {
     width: 70%;
   }
 }
@@ -181,8 +180,8 @@ hr{
   .information {
     flex: 2;
   }
-  .tarjeta{
-    width:85% ;
+  .tarjeta {
+    width: 85%;
   }
 }
 
@@ -195,7 +194,7 @@ hr{
     flex: 1;
     min-height: 100vh;
   }
-  .tarjeta{
+  .tarjeta {
     width: 95%;
   }
 
@@ -217,7 +216,7 @@ hr{
     flex: 1;
     min-height: 100vh;
   }
-  .tarjeta{
+  .tarjeta {
     width: 50%%;
   }
 
