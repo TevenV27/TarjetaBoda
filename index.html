@@ -1,174 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marlen y Carlos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Roboto:wght@100;300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="tarjeta.css" />
-  </head>
-  <body>
-    <audio class="aparienciaAudio" controls autoplay loop preload="auto">
-      <source src="music/lava.mp3" type="audio/mpeg" />
-      <source src="music/lava.mp3" type="audio/mpeg" />
-    </audio>
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <section class="flex">
-      <div class="contenedor-tarjeta">
-        <div class="tarjeta">
-          <img src="imagenes/Tarjeta.jpg " alt="tarjeta" />
-        </div>
-      </div>
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+hr {
+  margin-top: 5px;
+  background-color: rgb(0, 132, 51);
+  background: rgb(0, 132, 51);
+  color: rgb(0, 132, 51);
+}
 
-      <div class="information">
-        <h1 class="titulo">INFORMACIÓN</h1>
-        <div class="items">
-          <hr />
-          <div class="item">
-            <a class="botones" onclick="ceremoniaAnimacion()">CEREMONIA</a>
-            <div class="desplegar">
-              <p class="info desaparece">Iglesia Nuestra Señora del Rosario</p>
-              <p class="info desaparece">Cra 9 N 12-68</p>
-              <p class="info desaparece">Villa de Leyva - Boyacá</p>
-              <p class="info desaparece">H: 14:00</p>
-              <a
-                class="info info-mapa desaparece"
-                target="_blank"
-                href="https://goo.gl/maps/47nbgZyazQvRo14A6"
-                >Ver Mapa</a
-              >
-            </div>
-            <hr />
-          </div>
+.flex {
+  display: flex;
+}
 
-          <div class="item">
-            <a class="botones" onclick="celebracionAnimacion()">CELEBRACIÓN</a>
+.contenedor-tarjeta {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdd90;
+  background-image: url("imagenes/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-            <div class="desplegar">
-              <p class="info2 desaparece2">Restaurante el Solar de La Guaca</p>
-              <p class="info2 desaparece2">Cra 9 N 13-57</p>
-              <p class="info2 desaparece2">H: 16:00</p>
-              <a
-                class="info2 info-mapa desaparece2"
-                target="_blank"
-                href="https://g.page/elsolardelaguaca?share"
-                >Ver Mapa</a
-              >
-            </div>
-            <hr />
-          </div>
+.aparienciaAudio {
+  position: absolute;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  top: 0px;
+  left: 1px;
+  border-radius: 2px;
+}
+.tarjeta {
+  /* max-width: 500px; */
+  /* max-height: 100%; */
+  margin-top: 10px;
+  width: 50%;
+  border-radius: 5px;
+}
+.tarjeta > img {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749);
+}
 
-          <div class="item">
-            <a class="botones" onclick="regalosAnimacion()">REGALOS</a>
-            <div class="desplegar">
-              <p class="info4 desaparece4">
-                El regalo lo dejamos a la comodidad de tu preferencia.
-              </p>
+.information {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 6px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.966);
+  padding: 10px 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  /* border-radius: 10px; */
+  box-shadow: -5px 5px 25px rgba(27, 27, 27, 0.749);
+}
 
-              <div class="info4 desaparece4 descrip">
-                <ul class="info4 desaparece4">
-                  <li class="alineamiento">Lluvia de Sobres.</li>
-                  <li class="alineamiento">
-                    Transferencia cuenta de ahorros Bancolombia:
-                  </li>
-                  <p class="alineamiento">N° 675 310840 10</p>
-                  <li class="alineamiento">Lista de Regalos:</li>
-                </ul>
-              </div>
+.information > h1 {
+  margin-bottom: 10px;
+}
+.titulo {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
 
-              <a
-                class="info4 info-mapa desaparece4"
-                target="_blank"
-                href="https://www.noviosfalabella.com.co/novios-co/public/resultadoBusquedaNovios.do?categoria=todas&idsJerarquias=&nombreCategoria=&nivelCategoria=&codigoEvento=&dvEvento=&radTipoBusqueda=1&txtBusqueda=299860-02"
-                >Pagina de Regalos</a
-              >
-            </div>
-            <hr />
-          </div>
-          <div class="item">
-            <a class="botones" onclick="vestimentaAnimacion()">
-              CODIGO DE VESTIMENTA</a
-            >
-            <div class="desplegar">
-              <p class="info5 desaparece5 alineamiento">
-                Mujeres: Vestido largo, hermosas como siempre.
-              </p>
-              <p class="info5 desaparece5 alineamiento">
-                Hombres: Traje, lindos todos.
-              </p>
-            </div>
+.item {
+  border-radius: 5px;
+  padding-top: 2px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.items {
+  margin-top: 0px;
+}
 
-            <hr />
-          </div>
-          <div class="item">
-            <a class="botones" onclick="asistenciaAnimacion()"
-              >CONFIRMAR ASISTENCIA</a
-            >
-            <div class="desplegar">
-              <p class="info3 desaparece3">
-                Para nosotros es muy significativo el hecho de que estes
-                presente en nuestro maravilloso día, por favor confírmanos tu
-                asistencia.
-              </p>
-              <a
-                class="info3 info-mapa desaparece3"
-                target="_blank"
-                href="https://wa.me/573126730874?text=Gracias%20por%20la%20invitación,%20asistiré."
-                >Mensaje</a
-              >
-            </div>
-            <hr />
-          </div>
-        </div>
-      </div>
-    </section>
+.botones {
+  display: block;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+}
+.botones:hover {
+  background: rgb(75, 116, 68);
+  color: white;
+  cursor: pointer;
+}
 
-    <!-- script de javascript -->
-    <script>
-      //funcion para la animacion del boton de ceremonia
-      function ceremoniaAnimacion() {
-        var ancla = document.getElementsByClassName("info");
-        for (var i = 0; i < ancla.length; i++) {
-          ancla[i].classList.toggle("desaparece");
-        }
-      }
+.desplegar {
+  margin-top: 5px;
+}
 
-      // funcion para la animacion del boton celebracion
-      function celebracionAnimacion() {
-        var ancla2 = document.getElementsByClassName("info2");
-        for (var i = 0; i < ancla2.length; i++) {
-          ancla2[i].classList.toggle("desaparece2");
-        }
-      }
+.info {
+  text-align: center;
+  font-weight: 300;
+}
+.info2 {
+  text-align: center;
+  font-weight: 300;
+}
 
-      // funcion para la animacion del boton de asistencia
-      function asistenciaAnimacion() {
-        var ancla3 = document.getElementsByClassName("info3");
-        for (var i = 0; i < ancla3.length; i++) {
-          ancla3[i].classList.toggle("desaparece3");
-        }
-      }
-      // funcion para la animacion del boton de regalos
-      function regalosAnimacion() {
-        var ancla4 = document.getElementsByClassName("info4");
-        for (var i = 0; i < ancla4.length; i++) {
-          ancla4[i].classList.toggle("desaparece4");
-        }
-      }
+.info3 {
+  text-align: center;
+  font-weight: 300;
+}
+.info4 {
+  text-align: center;
+  font-weight: 300;
+}
+.info5 {
+  text-align: center;
+  font-weight: 300;
+}
+.info-mapa {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 132, 51);
+  margin: 5px auto;
+  margin-top: 2px;
+  font-weight: 500;
+}
 
-      // funcion para la animacion del boton de vesitimenta
-      function vestimentaAnimacion() {
-        var ancla5 = document.getElementsByClassName("info5");
-        for (var i = 0; i < ancla5.length; i++) {
-          ancla5[i].classList.toggle("desaparece5");
-        }
-      }
-    </script>
-  </body>
-</html>
+.desaparece {
+  display: none;
+}
+.desaparece2 {
+  display: none;
+}
+.desaparece3 {
+  display: none;
+}
+.desaparece4 {
+  display: none;
+}
+.desaparece5 {
+  display: none;
+}
+.alineamiento {
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.alineamiento2 {
+  text-align: center;
+  color: rgb(0, 132, 51);
+}
+.descrip {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1200px) {
+  .contenedor-tarjeta {
+    flex: 5;
+  }
+  .information {
+    flex: 2;
+  }
+  .tarjeta {
+    width: 70%;
+  }
+}
+@media (max-width: 1000px) {
+  .contenedor-tarjeta {
+    flex: 5;
+  }
+  .information {
+    flex: 2;
+  }
+  .tarjeta {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .contenedor-tarjeta {
+    flex: 1;
+    min-height: 100vh;
+  }
+  .tarjeta {
+    width: 95%;
+  }
+
+  .information {
+    flex: 1;
+    align-items: center;
+  }
+  .items {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .contenedor-tarjeta {
+    flex: 1;
+    min-height: 100vh;
+  }
+  .tarjeta {
+    width: 50%%;
+  }
+
+  .information {
+    flex: 1;
+    align-items: center;
+  }
+  .items {
+    width: 300px;
+  }
+}
