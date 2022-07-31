@@ -35,7 +35,7 @@ hr {
 
 .aparienciaAudio {
   position: absolute;
-  padding: 15px;
+  padding-bottom: 15px;
   padding-right: 15px;
   top: 0px;
   left: 1px;
@@ -73,6 +73,11 @@ hr {
 
 .information > h1 {
   margin-bottom: 10px;
+}
+.firm{
+  text-align:end;
+  align-items: flex-end;
+  color: rgba(87, 87, 87, 0.507);
 }
 .titulo {
   margin-top: 15px;
