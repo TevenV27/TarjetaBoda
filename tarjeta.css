@@ -235,7 +235,7 @@ hr {
   flex-direction: column;
   gap: 6px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.966);
+  background: rgb(255, 255, 255);
   padding: 10px 20px;
   padding-bottom: 60px;
   text-align: center;
@@ -373,7 +373,7 @@ hr {
 
   .contenedor-tarjeta {
     flex: 1;
-    min-height: 100vh;
+    min-height: 45vh;
   }
   .book {
     width: 65vh;
@@ -398,14 +398,18 @@ hr {
     flex: 1;
     min-width: auto;
     min-height: 100vh;
+    background-image: url(imagenes/fondo3.jpg);
+    background-size: cover;
   }
   .book {
     width: 43vh;
     height: 50vh;
+    margin-top: -30%;
   }
   .information {
     flex: 4;
     align-items: center;
+    margin-top: -30%;
   }
   .items {
     width: 300px;
