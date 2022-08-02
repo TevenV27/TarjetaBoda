@@ -408,6 +408,10 @@ hr {
 }
 
 @media (max-width: 420px) {
+  body{
+  overflow-x: hidden;
+  }
+  
   .flex {
     flex-direction: column;
   }
