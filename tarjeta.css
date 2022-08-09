@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  web
 }
 
 body {
@@ -39,6 +40,7 @@ hr {
   width: 43.9%;
   height: 80.5%;
   transition: transform 5s;
+  -webkit-transition: transform 5s;
 }
 
 /* espacio para la tarjeta y sobre */
@@ -73,6 +75,7 @@ hr {
   height: 100%;
   transform-origin: left;
   transition: transform 5s;
+  -webkit-transition: transform 5s;
 }
 .front1-content{
   position: absolute;
@@ -90,6 +93,7 @@ hr {
   height: 100%;
   transform-origin: left;
   transition: transform 5s;
+  -webkit-transition: transform 5s;
 }
 .back1-content{
   width: 100%;
@@ -110,6 +114,7 @@ hr {
   left: 50%;
   transform-origin: right;
   transition: transform 5s;
+  -webkit-transition: transform 5s;
 
 }
 .front2-content{
@@ -130,6 +135,7 @@ hr {
   left: 50%;
   transform-origin: right;
   transition: transform 5s;
+  -webkit-transition: transform 5s;
 
 }
 .back2-content{
