@@ -573,3 +573,42 @@ hr {
     font-size: 15px;
   }
 }
+@media (max-width: 360px) {
+  body{
+    overflow-x: hidden;
+  }
+  .flex {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .contenedor-tarjeta {
+    flex: 1;
+    min-width: auto;
+    min-height: 100vh;
+    background-image: url(imagenes/fondo3.jpg);
+    background-size: cover;
+  }
+  .book {
+    width: 45.5vh;
+    height: 52vh;
+    margin-top: -30%;
+  }
+  .information {
+    overflow-x: hidden;
+    flex: 4;
+    align-items: center;
+    margin-top: -20%;
+  }
+  .items {
+    width: 300px;
+  }
+  .btnBox{
+    top: 60px;
+    width: 150px;
+    height: 60px;
+  }
+  .btn{
+    font-size: 15px;
+  }
+}
