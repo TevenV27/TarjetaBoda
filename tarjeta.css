@@ -40,6 +40,7 @@ hr {
   height: 80.5%;
   transition: transform 8s;
   -webkit-transition: transform 8s;
+  -moz-transition: transform 8s;
 }
 
 /* espacio para la tarjeta y sobre */
@@ -75,6 +76,7 @@ hr {
   transform-origin: left;
   transition: transform 8s;
   -webkit-transition: transform 8s;
+  -moz-transition: transform 8s;
 }
 .front1-content{
   position: absolute;
@@ -93,6 +95,7 @@ hr {
   transform-origin: left;
   transition: transform 8s;
   -webkit-transition: transform 8s;
+  -moz-transition: transform 8s;
 }
 .back1-content{
   width: 100%;
@@ -423,17 +426,19 @@ hr {
     min-height: 100vh;
     background-image: url(imagenes/fondo3.jpg);
     background-size: cover;
+    justify-content: center;
+    align-items: center;
   }
   .book {
-    width: 55.5vh;
-    height: 63vh;
+    width: 60.5vh;
+    height: 69vh;
     margin-top: -30%;
   }
   .information {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -30%;
+    margin-top: -20%;
   }
   .items {
     width: 300px;
@@ -514,7 +519,7 @@ hr {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -30%;
+    margin-top: -20%;
   }
   .items {
     width: 300px;
@@ -554,7 +559,7 @@ hr {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -30%;
+    margin-top: -20%;
   }
   .items {
     width: 300px;
