@@ -73,8 +73,8 @@ hr {
   width: 50%;
   height: 100%;
   transform-origin: left;
-  transition: transform 5s;
-  -webkit-transition: transform 5s;
+  transition: transform 8s;
+  -webkit-transition: transform 8s;
 }
 .front1-content{
   position: absolute;
@@ -91,8 +91,8 @@ hr {
   width: 50%;
   height: 100%;
   transform-origin: left;
-  transition: transform 5s;
-  -webkit-transition: transform 5s;
+  transition: transform 8s;
+  -webkit-transition: transform 8s;
 }
 .back1-content{
   width: 100%;
@@ -112,47 +112,9 @@ hr {
   top: 0;
   left: 50%;
   transform-origin: right;
-  transition: transform 5s;
-  -webkit-transition: transform 5s;
-@media (max-width: 420px) {
-  body{
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
+  transition: transform 8s;
+  -webkit-transition: transform 8s;
 
-  .contenedor-tarjeta {
-    flex: 1;
-    min-width: auto;
-    min-height: 100vh;
-    background-image: url(imagenes/fondo3.jpg);
-    background-size: cover;
-  }
-  .book {
-    width: 45.5vh;
-    height: 52vh;
-    margin-top: -30%;
-  }
-  .information {
-    overflow-x: hidden;
-    flex: 4;
-    align-items: center;
-    margin-top: -30%;
-  }
-  .items {
-    width: 300px;
-  }
-  .btnBox{
-    top: 50px;
-    width: 150px;
-    height: 60px;
-  }
-  .btn{
-    font-size: 15px;
-  }
-}
 }
 .front2-content{
   position: absolute;
@@ -171,8 +133,8 @@ hr {
   top: 0;
   left: 50%;
   transform-origin: right;
-  transition: transform 5s;
-  -webkit-transition: transform 5s;
+  transition: transform 8s;
+  -webkit-transition: transform 8s;
 
 }
 .back2-content{
