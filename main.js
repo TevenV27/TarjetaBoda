@@ -12,25 +12,25 @@ let base = 1;
 let numTapas = 1;
 let maxima = numTapas + 1;
 
-
 function animation() {
+    
+  let etiquetaAudio = document.createElement("audio");
+  etiquetaAudio.setAttribute("src", "music/lava.mp3");
+  etiquetaAudio.play();
 
-    if (base < maxima) {
-        switch(base){
-            case 1:
-
-                book.classList.add("flipped");
-                pag1.classList.add("flipped");
-                pag2.classList.add("flipped");
-                pag1.style.zIndex = 1;
-                pag2.style.zIndex = 1;
-                break;
-            default:
-                throw new Error("error de estado");
-        }
-        btn.style.display = "none";
-        base++;
-
+  if (base < maxima) {
+    switch (base) {
+      case 1:
+        book.classList.add("flipped");
+        pag1.classList.add("flipped");
+        pag2.classList.add("flipped");
+        pag1.style.zIndex = 1;
+        pag2.style.zIndex = 1;
+        break;
+      default:
+        throw new Error("error de estado");
     }
-
+    btn.style.display = "none";
+    base++;
+  }
 }
