@@ -15,7 +15,7 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <audio class="aparienciaAudio" controls autoplay loop preload="none">
+    <audio class="aparienciaAudio" autoplay loop preload="none">
       <source src="music/lava.mp3" type="audio/mpeg" />
       <source src="music/lava.mp3" type="audio/mpeg" />
     </audio>
@@ -49,6 +49,15 @@
         <div class="btnBox">
           <div class="box">
             <button id="boton" class="btn">Abrir invitacion</button>
+            <script>
+              let boton = document.querySelector("#boton")
+          
+              boton.addEventListener("click", () => {
+                let etiquetaAudio = document.createElement("audio")
+                etiquetaAudio.setAttribute("src", "music/lava.mp3")
+                etiquetaAudio.play()
+              })
+          </script>
           </div>
         </div>
       </div>
