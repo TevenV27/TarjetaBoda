@@ -100,7 +100,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 5px 0px 0px 5px;
-  box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749);
+  box-shadow: 5px 5px 20px rgba(27, 27, 27, 0.337);
 
 }
 
@@ -114,7 +114,45 @@ hr {
   transform-origin: right;
   transition: transform 5s;
   -webkit-transition: transform 5s;
+@media (max-width: 420px) {
+  body{
+    overflow-x: hidden;
+  }
+  .flex {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
 
+  .contenedor-tarjeta {
+    flex: 1;
+    min-width: auto;
+    min-height: 100vh;
+    background-image: url(imagenes/fondo3.jpg);
+    background-size: cover;
+  }
+  .book {
+    width: 45.5vh;
+    height: 52vh;
+    margin-top: -30%;
+  }
+  .information {
+    overflow-x: hidden;
+    flex: 4;
+    align-items: center;
+    margin-top: -30%;
+  }
+  .items {
+    width: 300px;
+  }
+  .btnBox{
+    top: 50px;
+    width: 150px;
+    height: 60px;
+  }
+  .btn{
+    font-size: 15px;
+  }
+}
 }
 .front2-content{
   position: absolute;
@@ -144,7 +182,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 0px 5px 5px 0px;
-  box-shadow: -5px 5px 30px rgba(27, 27, 27, 0.749);
+  box-shadow: -5px 5px 20px rgba(27, 27, 27, 0.337);
 
 }
 
@@ -447,6 +485,47 @@ hr {
     font-size: 15px;
   }
 }
+
+@media (max-width: 450px) {
+  body{
+    overflow-x: hidden;
+  }
+  .flex {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .contenedor-tarjeta {
+    flex: 1;
+    min-width: auto;
+    min-height: 100vh;
+    background-image: url(imagenes/fondo3.jpg);
+    background-size: cover;
+  }
+  .book {
+    width: 43.5vh;
+    height: 50vh;
+    margin-top: -30%;
+  }
+  .information {
+    overflow-x: hidden;
+    flex: 4;
+    align-items: center;
+    margin-top: -30%;
+  }
+  .items {
+    width: 300px;
+  }
+  .btnBox{
+    top: 60px;
+    width: 150px;
+    height: 60px;
+  }
+  .btn{
+    font-size: 15px;
+  }
+}
+
 
 @media (max-width: 420px) {
   body{
