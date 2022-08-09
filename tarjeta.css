@@ -100,7 +100,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 5px 0px 0px 5px;
-  box-shadow: 5px 5px 20px rgba(27, 27, 27, 0.337);
+  /* box-shadow: 5px 5px 20px rgba(27, 27, 27, 0.337); */
 
 }
 
@@ -144,7 +144,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 0px 5px 5px 0px;
-  box-shadow: -5px 5px 20px rgba(27, 27, 27, 0.337);
+  /* box-shadow: -5px 5px 20px rgba(27, 27, 27, 0.337); */
 
 }
 
@@ -254,7 +254,7 @@ hr {
   padding: 10px 20px;
   padding-bottom: 60px;
   text-align: center;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   box-shadow: -5px 5px 25px rgba(27, 27, 27, 0.749);
 }
 
@@ -546,8 +546,8 @@ hr {
     background-size: cover;
   }
   .book {
-    width: 45.5vh;
-    height: 52vh;
+    width: 52.5vh;
+    height: 60vh;
     margin-top: -30%;
   }
   .information {
