@@ -152,6 +152,7 @@ hr {
 .front1{
   z-index: 1;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .back1{
   z-index: 0;
@@ -160,6 +161,7 @@ hr {
 .front2{
   z-index: 1;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .back2{
   z-index: 0;
