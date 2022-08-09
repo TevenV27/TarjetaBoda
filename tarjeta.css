@@ -100,7 +100,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 5px 0px 0px 5px;
-  /* box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749); */
+  box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749);
 
 }
 
@@ -144,7 +144,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 0px 5px 5px 0px;
-  /* box-shadow: -5px 5px 30px rgba(27, 27, 27, 0.749); */
+  box-shadow: -5px 5px 30px rgba(27, 27, 27, 0.749);
 
 }
 
