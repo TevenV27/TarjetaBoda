@@ -52,6 +52,7 @@ hr {
   left: 0;
   border-radius: 5px;
   perspective: 1500px;
+  -webkit-perspective: 1500px;
 
 }
 
@@ -116,6 +117,7 @@ hr {
   left: 50%;
   transform-origin: right;
   transition: transform 8s;
+  -webkit-transform-origin: right;
   -webkit-transition: transform 8s;
 
 }
@@ -137,6 +139,7 @@ hr {
   left: 50%;
   transform-origin: right;
   transition: transform 8s;
+  -webkit-transform-origin: right;
   -webkit-transition: transform 8s;
 
 }
@@ -188,11 +191,13 @@ hr {
 .flipped .back1{
 
   transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
 }
 .flipped .front2,
 .flipped .back2{
 
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 
