@@ -76,8 +76,9 @@ hr {
   height: 100%;
   transform-origin: left;
   transition: transform 8s;
+  -webkit-transform-origin: left;
   -webkit-transition: transform 8s;
-  -moz-transition: transform 8s;
+
 }
 .front1-content{
   position: absolute;
@@ -95,8 +96,8 @@ hr {
   height: 100%;
   transform-origin: left;
   transition: transform 8s;
+  -webkit-transform-origin: left;
   -webkit-transition: transform 8s;
-  -moz-transition: transform 8s;
 }
 .back1-content{
   width: 100%;
@@ -104,7 +105,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 5px 0px 0px 5px;
-  box-shadow: 5px 5px 20px rgba(27, 27, 27, 0.337);
+  /* box-shadow: 5px 5px 20px rgba(27, 27, 27, 0.337); */
 
 }
 
@@ -150,7 +151,7 @@ hr {
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 0px 5px 5px 0px;
-  box-shadow: -5px 5px 20px rgba(27, 27, 27, 0.337);
+  /* box-shadow: -5px 5px 20px rgba(27, 27, 27, 0.337); */
 
 }
 
@@ -204,9 +205,9 @@ hr {
 .btnBox{
   position: relative;
   display: flex;
-  top: 50px;
+  top: 25px;
   width: 250px;
-  height: 90px;
+  height: 65px;
 }
 .box{
   position: relative;
