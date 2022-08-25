@@ -53,11 +53,10 @@ hr {
   border-radius: 5px;
   perspective: 1500px;
   -webkit-perspective: 1500px;
-
 }
 
 /* tarjeta de invitacion */
-.tarjet{
+.tarjet {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -70,7 +69,7 @@ hr {
 }
 
 /* tapa izquierda del sobre */
-.front1{
+.front1 {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -78,9 +77,9 @@ hr {
   transition: transform 8s;
   -webkit-transform-origin: left;
   -webkit-transition: transform 8s;
-
 }
-.front1-content{
+/* Contenedor donde esta la cara izquierda de la iglesia
+ */.front1-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -90,7 +89,7 @@ hr {
 }
 
 /* capa trasera de la tapa izquierda  */
-.back1{
+.back1 {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -99,18 +98,18 @@ hr {
   -webkit-transform-origin: left;
   -webkit-transition: transform 8s;
 }
-.back1-content{
+
+/* Contenedor donde esta la textura trasera de la la tapa izquierda */
+.back1-content {
   width: 100%;
   height: 100%;
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 5px 0px 0px 5px;
-  /* box-shadow: 5px 5px 20px rgba(27, 27, 27, 0.337); */
-
 }
 
 /* tapa derecha del sobre */
-.front2{
+.front2 {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -120,9 +119,9 @@ hr {
   transition: transform 8s;
   -webkit-transform-origin: right;
   -webkit-transition: transform 8s;
-
 }
-.front2-content{
+/* contenedor donde va el lado derecho de la iglesia */
+.front2-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -132,7 +131,7 @@ hr {
 }
 
 /* capa trasera de la capa derecha */
-.back2{
+.back2 {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -142,81 +141,81 @@ hr {
   transition: transform 8s;
   -webkit-transform-origin: right;
   -webkit-transition: transform 8s;
-
 }
-.back2-content{
+.back2-content {
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: url(imagenes/back.jpg);
   background-size: cover;
   border-radius: 0px 5px 5px 0px;
-  /* box-shadow: -5px 5px 20px rgba(27, 27, 27, 0.337); */
-
 }
-
-
-.front1{
+/* Se oculta la imagen de la tapa izquierda */
+.front1 {
   z-index: 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.back1{
+.back1 {
   z-index: 0;
-
 }
-.front2{
+/* Se oculta la imagen de la tapa derecha */
+.front2 {
   z-index: 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.back2{
+.back2 {
   z-index: 0;
 }
 
-#tar{
+#tar {
   z-index: 1;
 }
-#p1{
+#p1 {
   z-index: 2;
 }
-#p2{
+#p2 {
   z-index: 2;
 }
 
-#book{
+#book {
   z-index: 3;
 }
 
+/* se realiza la animacion de totacion de la tapa izquierda*/
 .flipped .front1,
-.flipped .back1{
-
+.flipped .back1 {
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
 }
-.flipped .front2,
-.flipped .back2{
 
+/* se realiza la animacion de rotacion de la tapa derecha */
+.flipped .front2,
+.flipped .back2 {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
 
-
-.btnBox{
+/* estilo contenedor donde va el boton de abrir sobre */
+.btnBox {
   position: relative;
   display: flex;
   top: 25px;
   width: 250px;
   height: 65px;
 }
-.box{
+/* estilo tamaño de contenedor donde va el boton de abrir invitacion */
+.box {
   position: relative;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-.btn{
+
+/* estilo de boton abrir sobre */
+.btn {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -234,22 +233,12 @@ hr {
   top: 0px;
   z-index: 5;
 }
-.btn:focus{
+.btn:focus {
   outline: none;
 }
-.btn:hover{
-  background-color: rgb(57, 92, 63); ;
+.btn:hover {
+  background-color: rgb(57, 92, 63);
   color: aliceblue;
-
-}
-
-.aparienciaAudio {
-  position: absolute;
-  padding-bottom: 15px;
-  padding-right: 15px;
-  top: 0px;
-  left: 1px;
-  border-radius: 2px;
 }
 
 .information {
@@ -391,13 +380,12 @@ hr {
 }
 
 @media (max-width: 768px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .flex {
     flex-direction: column;
     overflow-x: hidden;
-    
   }
 
   .contenedor-tarjeta {
@@ -418,7 +406,7 @@ hr {
   }
 }
 @media (max-width: 500px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .flex {
@@ -449,18 +437,18 @@ hr {
   .items {
     width: 300px;
   }
-  .btnBox{
+  .btnBox {
     top: 30px;
     width: 150px;
     height: 60px;
   }
-  .btn{
+  .btn {
     font-size: 15px;
   }
 }
 
 @media (max-width: 450px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .flex {
@@ -489,19 +477,18 @@ hr {
   .items {
     width: 300px;
   }
-  .btnBox{
+  .btnBox {
     top: 60px;
     width: 150px;
     height: 60px;
   }
-  .btn{
+  .btn {
     font-size: 15px;
   }
 }
 
-
 @media (max-width: 420px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .flex {
@@ -530,18 +517,18 @@ hr {
   .items {
     width: 300px;
   }
-  .btnBox{
+  .btnBox {
     top: 50px;
     width: 150px;
     height: 60px;
   }
-  .btn{
+  .btn {
     font-size: 15px;
   }
 }
 
 @media (max-width: 376px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .flex {
@@ -570,17 +557,17 @@ hr {
   .items {
     width: 300px;
   }
-  .btnBox{
+  .btnBox {
     top: 45px;
     width: 150px;
     height: 60px;
   }
-  .btn{
+  .btn {
     font-size: 15px;
   }
 }
 @media (max-width: 360px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .flex {
@@ -609,12 +596,12 @@ hr {
   .items {
     width: 300px;
   }
-  .btnBox{
+  .btnBox {
     top: 60px;
     width: 150px;
     height: 60px;
   }
-  .btn{
+  .btn {
     font-size: 15px;
   }
 }
