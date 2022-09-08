@@ -21,11 +21,11 @@ function animation() {
   if (base < maxima) {
     switch (base) {
       case 1:
-        book.classList.add("flipped");
+        /* book.classList.add("flipped"); */
         pag1.classList.add("flipped");
         pag2.classList.add("flipped");
         pag1.style.zIndex = 1;
-        pag2.style.zIndex = 1;
+        pag2.style.zIndex = 2;
         break;
       default:
         throw new Error("error de estado");
