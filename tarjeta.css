@@ -74,9 +74,12 @@ hr {
   width: 50%;
   height: 100%;
   transform-origin: left;
-  transition: transform 8s;
+  transition: transform 7.9s;
   -webkit-transform-origin: left;
-  -webkit-transition: transform 8s;
+  -webkit-transition: transform 7.9s;
+  -ms-transition: transform 7.9s;
+  -o-transition: transform 7.9s;
+  -moz-transition: transform 7.9s;
 }
 /* Contenedor donde esta la cara izquierda de la iglesia
  */.front1-content {
@@ -116,9 +119,12 @@ hr {
   top: 0;
   left: 50%;
   transform-origin: right;
-  transition: transform 8s;
+  transition: transform 7.9s;
   -webkit-transform-origin: right;
-  -webkit-transition: transform 8s;
+  -webkit-transition: transform 7.9s;
+  -ms-transition: transform 7.9s;
+  -o-transition: transform 7.9s;
+  -moz-transition: transform 7.9s;
 }
 /* contenedor donde va el lado derecho de la iglesia */
 .front2-content {
