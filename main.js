@@ -1,6 +1,6 @@
 const btn = document.querySelector("#boton");
-const btnBox = document.querySelector("#blur");
-const infor = document.querySelector("#information");
+const btn2 = document.querySelector("#boton2");
+const slide = document.querySelector("#slide");
 const pag1 = document.querySelector("#p1");
 const pag2 = document.querySelector("#p2");
 const tar = document.querySelector("#tar");
@@ -8,12 +8,24 @@ const p1 = document.querySelector("#p1");
 const p2 = document.querySelector("#p2");
 
 btn.addEventListener("click", click);
+btn2.addEventListener("click", click2);
 
 function click(){
   btn.style.display = "none";
-  btnBox.style.display = "none";
-  setTimeout(music,3000);
-  setTimeout(animation,3000);
+  setTimeout(music,1000);
+  setTimeout(animation,1000);
+}
+
+function click2(){
+  btn.style.display = "none";
+  btn2.style.display = "none";
+  setTimeout(music,1000);
+  setTimeout(animation,1000);
+  setTimeout(timeSlide, 10000);
+}
+
+function timeSlide(){
+  slide.style.display = "flex";
 }
 
 function music(){
