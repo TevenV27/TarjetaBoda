@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   position: relative;
   font-family: "Roboto", sans-serif;
+  overflow-y: auto;
 }
 hr {
   margin-top: 5px;
@@ -220,35 +221,30 @@ hr {
   left: 0;
 }
 
-/* estilo de boton abrir sobre */
-.btn {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  height: 80%;
-  background-color: #668f63;
-  color: white;
+.btn2{
+  width: 300px;
+  height: 60px;
+  margin-top: 5px;
+  border-radius: 10px;
   border: 0.2px solid rgb(255, 230, 2);
-  border-radius: 5px;
-  align-items: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 5px 5px 10px rgba(27, 27, 27, 0.749);
-  top: 0px;
-  z-index: 5;
+  background-color: rgb(57, 92, 63);
+  color: white;
+  box-shadow: 5px 5px 30px rgba(27, 27, 27, 0.749);
+  cursor: pointer;
 }
-.btn:focus {
+.btn2:focus {
   outline: none;
 }
-.btn:hover {
-  background-color: rgb(57, 92, 63);
+.btn2:hover {
+  background-color: rgb(40, 68, 45);
   color: aliceblue;
 }
 
+
 .information {
+  display: none;
   flex: 1;
+  position: relative;
   display: flex;
   overflow-y: auto;
   flex-direction: column;
@@ -265,6 +261,11 @@ hr {
 .information > h1 {
   margin-bottom: 10px;
 }
+.inform2{
+  position: relative;
+  z-index: 10;
+}
+
 .firm {
   text-align: end;
   align-items: flex-end;
@@ -281,6 +282,7 @@ hr {
   margin-top: 5px;
   margin-bottom: 2px;
 }
+
 .items {
   margin-top: 0px;
 }
@@ -432,13 +434,11 @@ hr {
   .book {
     width: 60.5vh;
     height: 69vh;
-    margin-top: -30%;
   }
   .information {
     overflow-x: hidden;
-    flex: 4;
+    flex: 7;
     align-items: center;
-    margin-top: -20%;
   }
   .items {
     width: 300px;
@@ -472,14 +472,13 @@ hr {
   .book {
     width: 43.5vh;
     height: 50vh;
-    margin-top: -30%;
   }
   .information {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -30%;
   }
+
   .items {
     width: 300px;
   }
@@ -505,20 +504,18 @@ hr {
   .contenedor-tarjeta {
     flex: 1;
     min-width: auto;
-    min-height: 100vh;
+    min-height: 95vh;
     background-image: url(imagenes/fondo3.jpg);
     background-size: cover;
   }
   .book {
     width: 52.5vh;
     height: 60vh;
-    margin-top: -30%;
   }
   .information {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -20%;
   }
   .items {
     width: 300px;
@@ -552,13 +549,11 @@ hr {
   .book {
     width: 52.5vh;
     height: 60vh;
-    margin-top: -30%;
   }
   .information {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -20%;
   }
   .items {
     width: 300px;
@@ -591,13 +586,11 @@ hr {
   .book {
     width: 45.5vh;
     height: 52vh;
-    margin-top: -30%;
   }
   .information {
     overflow-x: hidden;
     flex: 4;
     align-items: center;
-    margin-top: -20%;
   }
   .items {
     width: 300px;
