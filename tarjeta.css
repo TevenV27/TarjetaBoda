@@ -1,668 +1,200 @@
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  min-height: 100vh;
-  position: relative;
-  font-family: "Roboto", sans-serif;
-}
-hr {
-  margin-top: 5px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marlen y Carlos</title>
 
-/* tipo de display flexible */
-.flex {
-  display: flex;
-}
+  <link rel="icon" href="imagenes/logo.jpg" />
+  <meta property="og:site_name" content="Marlen y Carlos">
+  <meta property="og:title" content="Marlen y Carlos" />
+  <meta property="og:description" content="Invitación a nuestra boda" />
+  <meta property="og:image" itemprop="image"
+    content="https://raw.githubusercontent.com/TevenV27/TarjetaBoda/main/imagenes/logo.jpg" />
+  <!-- No need to change anything here -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="250" />
+  <meta property="og:image:height" content="250" />
+  <meta property="og:url" content="https://marlen-y-carlos.vercel.app/">
 
-/* contenedor donde va la tarjeta y el fondo */
-.contenedor-tarjeta {
-  flex: 5;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("imagenes/fondo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Roboto:wght@100;300;500;700&display=swap"
+    rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="tarjeta.css" />
+  <script src="main.js" defer></script>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
 
-/* caja donde va la tarjeta y sobre */
-.book {
-  position: relative;
-  display: flex;
-  width: 43.9%;
-  height: 80.5%;
-  transition: transform 8s;
-  -webkit-transition: transform 8s;
-  -moz-transition: transform 8s;
-}
+<body>
+  <section class="flex">
+    <div class="contenedor-tarjeta">
+      <div id="book" class="book">
+        <div>
+          <div id="tar" class="tarjet"></div>
+        </div>
+        <div id="p1" class="paper">
+          <div class="front1">
+            <div id="f1" class="front1-content">
+              <p></p>
+            </div>
+          </div>
+          <div class="back1">
+            <div id="b1" class="back1-content"></div>
+          </div>
+        </div>
 
-/* espacio para la tarjeta y sobre */
-.paper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-  perspective: 1500px;
-  -webkit-perspective: 1500px;
-}
+        <div id="p2" class="paper">
+          <div class="front2">
+            <div id="f2" class="front2-content"></div>
+          </div>
+          <div class="back2">
+            <div id="b2" class="back2-content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="btnBox" style="justify-content: center;align-items: center; align-content: center;">
+        <div class="box" style="display: flex;justify-content: center;align-items: center; align-content: center;">
+          <button id="boton" class="btn">Abrir invitacion</button>
+          <button id="boton2" class="btn2">Abrir Invitación</button> <img src="" alt="">
+          <a id="slide" href="#information" style="display: none;text-decoration: none; font-size: 20px;"><img style="width: 100px; height: auto;" src="imagenes/flecha.gif"alt="Desliza"></a>
+        </div>
+      </div>
+    </div>
 
-/* tarjeta de invitacion */
-.tarjet {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: url(imagenes/Tarjeta.jpg);
-  background-size: cover;
-  border-radius: 5px;
-  box-shadow: 5px 5px 25px rgba(27, 27, 27, 0.749);
-}
+    <div id="information" class="information">
+      <h1 class="titulo">INFORMACIÓN</h1>
+      <div class="items">
+        <hr />
+        <div class="item">
+          <a class="botones" onclick="ceremoniaAnimacion()">CEREMONIA</a>
+          <div class="desplegar">
+            <p class="info desaparece">Iglesia Nuestra Señora del Rosario</p>
+            <p class="info desaparece">Cra 9 N 12-68</p>
+            <p class="info desaparece">Villa de Leyva - Boyacá</p>
+            <p class="info desaparece">H: 15:45</p>
+            <a class="info info-mapa desaparece" href="https://goo.gl/maps/47nbgZyazQvRo14A6">Ver Mapa</a>
+          </div>
+          <hr />
+        </div>
 
-/* tapa izquierda del sobre */
-.front1 {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  transform-origin: left;
-  transition: transform 7.9s;
-  -webkit-transform-origin: left;
-  -webkit-transition: transform 7.9s;
-  -ms-transition: transform 7.9s;
-  -o-transition: transform 7.9s;
-  -moz-transition: transform 7.9s;
-}
-/* Contenedor donde esta la cara izquierda de la iglesia
- */.front1-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(imagenes/left.jpg);
-  background-size: cover;
-  border-radius: 5px 0px 0px 5px;
-}
+        <div class="item">
+          <a class="botones" onclick="celebracionAnimacion()">CELEBRACIÓN</a>
 
-/* capa trasera de la tapa izquierda  */
-.back1 {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  transform-origin: left;
-  transition: transform 8s;
-  -webkit-transform-origin: left;
-  -webkit-transition: transform 8s;
-}
+          <div class="desplegar">
+            <p class="info2 desaparece2">Restaurante el Solar de La Guaca</p>
+            <p class="info2 desaparece2">Cra 9 N 13-57</p>
+            <p class="info2 desaparece2">H: 17:30</p>
+            <a class="info2 info-mapa desaparece2" href="https://maps.app.goo.gl/qwt4dXsFJgwgAU3v6">Ver Mapa</a>
+          </div>
+          <hr />
+        </div>
 
-/* Contenedor donde esta la textura trasera de la la tapa izquierda */
-.back1-content {
-  width: 100%;
-  height: 100%;
-  background-image: url(imagenes/back.jpg);
-  background-size: cover;
-  border-radius: 5px 0px 0px 5px;
-}
+        <div class="item">
+          <a class="botones" onclick="regalosAnimacion()">REGALOS</a>
+          <div class="desplegar">
+            <p class="info4 desaparece4">
+              El regalo lo dejamos a la modalidad de tu preferencia.
+            </p>
 
-/* tapa derecha del sobre */
-.front2 {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform-origin: right;
-  transition: transform 7.9s;
-  -webkit-transform-origin: right;
-  -webkit-transition: transform 7.9s;
-  -ms-transition: transform 7.9s;
-  -o-transition: transform 7.9s;
-  -moz-transition: transform 7.9s;
-}
-/* contenedor donde va el lado derecho de la iglesia */
-.front2-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(imagenes/right.jpg);
-  background-size: cover;
-  border-radius: 0px 5px 5px 0px;
-}
+            <div class="info4 desaparece4 descrip">
+              <ul class="info4 desaparece4">
+                <li class="alineamiento">Lluvia de Sobres.</li>
+                <li class="alineamiento">
+                  Transferencia cuenta de ahorros Bancolombia:
+                </li>
+                <p class="alineamiento">N° 675 310840 10</p>
+                <li class="alineamiento">Lista de Regalos:</li>
+              </ul>
+            </div>
 
-/* capa trasera de la capa derecha */
-.back2 {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform-origin: right;
-  transition: transform 8s;
-  -webkit-transform-origin: right;
-  -webkit-transition: transform 8s;
-}
-.back2-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(imagenes/back.jpg);
-  background-size: cover;
-  border-radius: 0px 5px 5px 0px;
-}
-/* Se oculta la imagen de la tapa izquierda */
-.front1 {
-  z-index: 1;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.back1 {
-  z-index: 0;
-}
-/* Se oculta la imagen de la tapa derecha */
-.front2 {
-  z-index: 1;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.back2 {
-  z-index: 0;
-}
+            <a class="info4 info-mapa desaparece4" target="_blank"
+              href="https://www.noviosfalabella.com.co/novios-co/public/resultadoBusquedaNovios.do?categoria=todas&idsJerarquias=&nombreCategoria=&nivelCategoria=&codigoEvento=&dvEvento=&radTipoBusqueda=1&txtBusqueda=299860-02">Página
+              de Regalos</a>
+          </div>
+          <hr />
+        </div>
+        <div class="item">
+          <a class="botones" onclick="vestimentaAnimacion()">
+            CÓDIGO DE VESTIMENTA</a>
+          <div class="desplegar">
+            <p class="info5 desaparece5 alineamiento">
+              Mujeres: Vestido largo, hermosas como siempre.
+            </p>
+            <p class="info5 desaparece5 alineamiento">
+              Hombres: Traje, lindos todos.
+            </p>
+          </div>
 
-#tar {
-  z-index: 1;
-}
-#p1 {
-  z-index: 2;
-}
-#p2 {
-  z-index: 2;
-}
+          <hr />
+        </div>
+        <div class="item">
+          <a class="botones" onclick="asistenciaAnimacion()">CONFIRMAR ASISTENCIA</a>
+          <div class="desplegar">
+            <p class="info3 desaparece3">
+              A fin de poder preparar los asientos para todos con anticipación, confirma o declina tu asistencia a
+              nuestra fiesta.
+            </p>
+            <a class="info3 info-mapa desaparece3"
+              href="https://wa.me/5511995954007?text=Gracias%20por%20la%20invitación,%20asistiré.">Mensaje</a>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div class="firm">
+        <h6>By Steven Victoria</h6>
+      </div>
+    </div>
+  </section>
 
-#book {
-  z-index: 3;
-}
+  <!-- script de javascript -->
+  <script>
+    //funcion para la animacion del boton de ceremonia
+    function ceremoniaAnimacion() {
+      var ancla = document.getElementsByClassName("info");
+      for (var i = 0; i < ancla.length; i++) {
+        ancla[i].classList.toggle("desaparece");
+      }
+    }
 
-/* se realiza la animacion de totacion de la tapa izquierda*/
-.flipped .front1,
-.flipped .back1 {
-  transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
-}
+    // funcion para la animacion del boton celebracion
+    function celebracionAnimacion() {
+      var ancla2 = document.getElementsByClassName("info2");
+      for (var i = 0; i < ancla2.length; i++) {
+        ancla2[i].classList.toggle("desaparece2");
+      }
+    }
 
-/* se realiza la animacion de rotacion de la tapa derecha */
-.flipped .front2,
-.flipped .back2 {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-}
+    // funcion para la animacion del boton de asistencia
+    function asistenciaAnimacion() {
+      var ancla3 = document.getElementsByClassName("info3");
+      for (var i = 0; i < ancla3.length; i++) {
+        ancla3[i].classList.toggle("desaparece3");
+      }
+    }
+    // funcion para la animacion del boton de regalos
+    function regalosAnimacion() {
+      var ancla4 = document.getElementsByClassName("info4");
+      for (var i = 0; i < ancla4.length; i++) {
+        ancla4[i].classList.toggle("desaparece4");
+      }
+    }
 
-/* estilo contenedor donde va el boton de abrir sobre */
-.btnBox {
-  position: relative;
-  display: flex;
-  top: 25px;
-  width: 250px;
-  height: 65px;
-}
-/* estilo tamaño de contenedor donde va el boton de abrir invitacion */
-.box {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
+    // funcion para la animacion del boton de vesitimenta
+    function vestimentaAnimacion() {
+      var ancla5 = document.getElementsByClassName("info5");
+      for (var i = 0; i < ancla5.length; i++) {
+        ancla5[i].classList.toggle("desaparece5");
+      }
+    }
+  </script>
+</body>
 
-/* estilo de boton abrir sobre */
-.btn {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  height: 80%;
-  background-color: #668f63;
-  color: white;
-  border: 0.2px solid rgb(255, 230, 2);
-  border-radius: 5px;
-  align-items: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 5px 5px 10px rgba(27, 27, 27, 0.749);
-  top: 0px;
-  z-index: 5;
-}
-.btn:focus {
-  outline: none;
-}
-.btn:hover {
-  background-color: rgb(57, 92, 63);
-  color: aliceblue;
-}
-.btn2{
-  display: none;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  height: 80%;
-  background-color: #668f63;
-  color: white;
-  border: 0.2px solid rgb(255, 230, 2);
-  border-radius: 5px;
-  align-items: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 5px 5px 10px rgba(27, 27, 27, 0.749);
-  top: 0px;
-  z-index: 5;
-}
-.btn2:focus {
-  outline: none;
-}
-.btn2:hover {
-  background-color: rgb(57, 92, 63);
-  color: aliceblue;
-}
-
-.information {
-  flex: 1;
-  display: flex;
-  overflow-y: auto;
-  flex-direction: column;
-  gap: 6px;
-  height: 100vh;
-  background: rgb(255, 255, 255);
-  padding: 10px 20px;
-  padding-bottom: 60px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: -5px 5px 25px rgba(27, 27, 27, 0.749);
-}
-
-.information > h1 {
-  margin-bottom: 10px;
-}
-.firm {
-  text-align: end;
-  align-items: flex-end;
-  color: rgba(87, 87, 87, 0.23);
-}
-.titulo {
-  margin-top: 15px;
-  margin-bottom: 0px;
-}
-
-.item {
-  border-radius: 5px;
-  padding-top: 2px;
-  margin-top: 5px;
-  margin-bottom: 2px;
-}
-.items {
-  margin-top: 0px;
-}
-
-.botones {
-  display: block;
-  text-decoration: none;
-  border-radius: 5px;
-  color: black;
-}
-.botones:hover {
-  background: rgb(75, 116, 68);
-  color: white;
-  cursor: pointer;
-}
-
-.desplegar {
-  margin-top: 5px;
-}
-
-.info {
-  text-align: center;
-  font-weight: 300;
-}
-.info2 {
-  text-align: center;
-  font-weight: 300;
-}
-
-.info3 {
-  text-align: center;
-  font-weight: 300;
-}
-.info4 {
-  text-align: center;
-  font-weight: 300;
-}
-.info5 {
-  text-align: center;
-  font-weight: 300;
-}
-.info-mapa {
-  text-align: center;
-  text-decoration: none;
-  color: rgb(0, 132, 51);
-  margin: 5px auto;
-  margin-top: 2px;
-  font-weight: 500;
-}
-
-.desaparece {
-  display: none;
-}
-.desaparece2 {
-  display: none;
-}
-.desaparece3 {
-  display: none;
-}
-.desaparece4 {
-  display: none;
-}
-.desaparece5 {
-  display: none;
-}
-.alineamiento {
-  text-align: left;
-  margin-left: 5px;
-  margin-top: 2px;
-}
-.alineamiento2 {
-  text-align: center;
-  color: rgb(0, 132, 51);
-}
-.descrip {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-@media (max-width: 1200px) {
-  .contenedor-tarjeta {
-    flex: 5;
-  }
-  .information {
-    flex: 2;
-  }
-  .tarjeta {
-    width: 70%;
-  }
-}
-@media (max-width: 1000px) {
-  .contenedor-tarjeta {
-    flex: 5;
-  }
-  .information {
-    flex: 2;
-  }
-  .tarjeta {
-    width: 85%;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .contenedor-tarjeta {
-    flex: 1;
-    min-height: 45vh;
-  }
-  .book {
-    width: 65vh;
-    height: 680px;
-  }
-
-  .information {
-    flex: 1;
-    align-items: center;
-  }
-  .items {
-    width: 300px;
-  }
-}
-@media (max-width: 500px) {
-  body {
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .contenedor-tarjeta {
-    flex: 1;
-    min-width: auto;
-    min-height: 100vh;
-    background-image: url(imagenes/fondo3.jpg);
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-  }
-  .book {
-    width: 60.5vh;
-    height: 69vh;
-    margin-top: -30%;
-  }
-  .information {
-    overflow-x: hidden;
-    flex: 4;
-    align-items: center;
-    margin-top: -20%;
-  }
-  .items {
-    width: 300px;
-  }
-  .btnBox {
-    top: 30px;
-    width: 150px;
-    height: 60px;
-  }
-  .btn {
-    font-size: 15px;
-    display: none;
-  }
-  .btn2{
-    display: flex;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 450px) {
-  body {
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .contenedor-tarjeta {
-    flex: 1;
-    min-width: auto;
-    min-height: 100vh;
-    background-image: url(imagenes/fondo3.jpg);
-    background-size: cover;
-  }
-  .book {
-    width: 43.5vh;
-    height: 50vh;
-    margin-top: -30%;
-  }
-  .information {
-    overflow-x: hidden;
-    flex: 4;
-    align-items: center;
-    margin-top: -30%;
-  }
-  .items {
-    width: 300px;
-  }
-  .btnBox {
-    top: 60px;
-    width: 150px;
-    height: 60px;
-  }
-  .btn {
-    font-size: 15px;
-    display: none;
-
-  }
-  .btn2{
-    display: flex;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 420px) {
-  body {
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .contenedor-tarjeta {
-    flex: 1;
-    min-width: auto;
-    min-height: 100vh;
-    background-image: url(imagenes/fondo3.jpg);
-    background-size: cover;
-  }
-  .book {
-    width: 52.5vh;
-    height: 60vh;
-    margin-top: -30%;
-  }
-  .information {
-    overflow-x: hidden;
-    flex: 4;
-    align-items: center;
-    margin-top: -20%;
-  }
-  .items {
-    width: 300px;
-  }
-  .btnBox {
-    top: 50px;
-    width: 150px;
-    height: 60px;
-  }
-  .btn {
-    font-size: 15px;
-    display: none;
-
-  }
-  .btn2{
-    display: flex;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 376px) {
-  body {
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .contenedor-tarjeta {
-    flex: 1;
-    min-width: auto;
-    min-height: 100vh;
-    background-image: url(imagenes/fondo3.jpg);
-    background-size: cover;
-  }
-  .book {
-    width: 52.5vh;
-    height: 60vh;
-    margin-top: -30%;
-  }
-  .information {
-    overflow-x: hidden;
-    flex: 4;
-    align-items: center;
-    margin-top: -20%;
-  }
-  .items {
-    width: 300px;
-  }
-  .btnBox {
-    top: 45px;
-    width: 150px;
-    height: 60px;
-  }
-  .btn {
-    font-size: 15px;
-    display: none;
-
-  }
-  .btn2{
-    font-size: 15px;
-    display: flex;
-  }
-}
-@media (max-width: 360px) {
-  body {
-    overflow-x: hidden;
-  }
-  .flex {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .contenedor-tarjeta {
-    flex: 1;
-    min-width: auto;
-    min-height: 100vh;
-    background-image: url(imagenes/fondo3.jpg);
-    background-size: cover;
-  }
-  .book {
-    width: 45.5vh;
-    height: 52vh;
-    margin-top: -30%;
-  }
-  .information {
-    overflow-x: hidden;
-    flex: 4;
-    align-items: center;
-    margin-top: -20%;
-  }
-  .items {
-    width: 300px;
-  }
-  .btnBox {
-    top: 60px;
-    width: 150px;
-    height: 60px;
-  }
-  .btn {
-    font-size: 15px;
-    display: none;
-
-  }
-  .btn2{
-    display: block;
-    font-size: 15px;
-  }
-}
+</html>
