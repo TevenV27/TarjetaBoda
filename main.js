@@ -12,16 +12,16 @@ btn2.addEventListener("click", click2);
 
 function click(){
   btn.style.display = "none";
-  setTimeout(music,1000);
-  setTimeout(animation,1000);
+  setTimeout(music,980);
+  setTimeout(animation,980);
 }
 
 function click2(){
   btn.style.display = "none";
   btn2.style.display = "none";
-  setTimeout(music,1000);
-  setTimeout(animation,1000);
-  setTimeout(timeSlide, 10000);
+  setTimeout(music,980);
+  setTimeout(animation,980);
+  setTimeout(timeSlide, 9800);
 }
 
 function timeSlide(){
